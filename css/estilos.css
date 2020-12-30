@@ -1,0 +1,514 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?fynqng');
+  src:  url('../fonts/icomoon.eot?fynqng#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?fynqng') format('truetype'),
+    url('../fonts/icomoon.woff?fynqng') format('woff'),
+    url('../fonts/icomoon.svg?fynqng#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /*Es como si se estuviese asignando 20px*/
+  background-color: #698c8b;
+  display: none; /*Por defecto para que solo se vea según las condiciones del MQ*/
+  line-height: 40px;
+  text-align: center; /*estas dos propiedades hacen las veces de alignI y justifyC*/
+  position: fixed;/*permite fijar o mover un elemento según el valor asignado*/
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: white;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+}
+
+h1{
+  font-size: 40px; /*tamaño de fuente*/
+  line-height: 150%; /*alto de línea*/
+  letter-spacing: -.2px; /*espacio entre letras*/
+  text-transform: none /*mayuscula o mnuscula*/;
+  color: #3C3C3C;
+  margin: 0;
+  /*margin: 100px 150px 70px 30px;*/
+  /*text-decoration: underline;*/
+}
+
+h1 strong{
+  color: #ececec;
+}
+
+h2{
+  /* color: #698c8b;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px; */
+  font-size: 24px; /*tamaño de fuente*/
+  line-height: 150%; /*alto de línea*/
+  letter-spacing: -.2px; /*espacio entre letras*/
+  text-transform: none /*mayuscula o mnuscula*/;
+  color: #3C3C3C;
+  margin: 0;
+}
+
+.hero{
+height: 300px;
+/*background-image: url('../image/hero.jpg');*/
+/* background: radial-gradient(200px top, ellipse, white, #1162ac, black); */
+background: linear-gradient(-70deg, #004aad, #c2d2e9);
+/*background-size: 500px 300px;
+background-repeat: no-repeat;
+background-position-x: right;*/ /*posición en X desde la derecha. Se ocultan al final para poder hacer la alineacion de la img dentro del container*/
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.hero-image{
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.portfolio{
+  background: #fafafa;
+  padding: 20px;
+}
+
+.project {
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-details{
+  width: 50%;
+} /*Pasa de ser 500px a 50% para que evitar que tengan un tamañó fijo
+y más que su contenedor (tiene 1000px)= medidas relativas*/
+
+.project-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-course, .project-date {
+margin: 10px, 0;
+}
+
+.project-description{
+  font-size: 20px;
+}
+
+.project strong{
+  font-family: 'Fjalla One', sans-serif;;
+}
+
+.project-imageContainer{
+  width: 50%;
+} /*Pasa de ser 500px a 50% para que evitar que tengan un tamañó fijo
+y más que su contenedor (tiene 1000px)= medidas relativas*/
+
+.project-imageContainer img {
+  max-width: 100%;
+} /*forma de hacer las imag responsive es que los valores de sus elementos sean
+el 100% de su elemento padre*/
+
+.header{
+  background-color:white;
+  color: #1d252c;
+  display:flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+figure {
+  margin: 0;
+}
+
+.menu{
+  height: inherit; /*alto heredado del padre*/
+}
+
+.header ol{
+  display: flex;
+  height: inherit;
+}
+
+.header ol li{
+  height: inherit;
+}
+
+.header a{
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px; /*espaciado hacia arr-ab, izq-der*/
+  color: #1d252c;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+ol,ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.courses-list-title{
+  margin-left: 20px;
+  text-align: center;
+  margin: 20px 20px;
+}
+
+.courses-list{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.course{
+  margin: 1%;
+  width: 48%;
+  flex-shrink: 0;
+  border-radius: 10px; /*redondea el borde*/
+  overflow: hidden; /*genera scrolls. Si se desborda de su elemento, lo oculta*/
+  background: #466AB6
+  ;
+}
+
+.course img{
+  width: 480px;
+  height: 200px;
+  object-fit: cover; /*ajusta la imagen al tamaño deseado*/
+}
+
+.course-detail{
+  margin: 20px 40px;
+  background-color: white;
+  position: relative; /*sobrepone una imagen en otra*/
+  margin-top: -40px; /* en negativo para disminuir el margen de un elemento y quede más cerca/junto de otro*/
+  padding: 20px;
+  text-align: center;
+}
+
+.course-description{
+  text-align: left;
+}
+
+.course-url{
+  color: #698c8b;
+  border: 1px solid #698c8b;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact{
+  background-color: #698c8b;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-email input{
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('https://i.imgur.com/RXQx62r.png');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: center;
+}
+
+.form-email button{
+  display: inline-block;
+  margin-top: 10px;
+  background: transparent;
+  color: white;
+  padding: 10px 0px;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.form-email h3{
+  font-family: 'Source Sans Pro';
+}
+
+.social-link{
+  display:inline-block; /*los <a> tienen por defecto display inline*/
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  margin: 0px 10px;
+  background-size: 40px 40px;
+}
+
+.social-cv{
+  display:inline-block; /*los <a> tienen por defecto display inline*/
+  width: 43px;
+  height: 40px;
+  border: 1px solid;
+  margin: 0px 10px;
+  background-size: 43px 40px;
+}
+
+.social-link.linkedin{
+  background-image: url('https://i.imgur.com/ym1BQJR.png');
+  outline: 0;
+  border: none;
+}
+
+.social-cv.cv{
+  background-image: url('https://i.imgur.com/nVjEK0u.png');
+  outline: 0;
+  border: none;
+}
+
+.social-link.github{
+  background-image: url('../image/github.svg');
+  outline: 0;
+  border: none;
+}
+
+.footer{
+  color: white;
+  background-color: #1F242B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer img{
+  vertical-align: middle; /*Util para cuando se mescla tex con img*/
+}
+
+.container{
+  max-width: 1000px;
+  /*width: 100%; Una de las formas para que el contenido se ajuste a la pantalla completa
+  pero según los pixeles indicados arriba. Esto para que al hacerlo resposive se evite llevar el
+  contenido al centro*/
+  flex: 1; /*Con esta forma se toma todo el ancho disponible dentro del elemento (rd)*/
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}/*cada sección debe envolverse en un container para
+llevar el contenido al centro, como dentro de una caja.
+En lugar de darle un mismo fondo a todo el body*/
+
+/*Si es destkop first, empezar por el MQ más grande.Las
+siguientes son los tamaños más estandar*/
+@media screen and (max-width: 1023px) {
+  .container {
+    padding: 0 1em;
+  }
+  .hero{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+  .hero-image {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.3;
+  }
+  h1 {
+    color: #fafafa;
+    font-size: 2em;
+    z-index: 2;;
+  }
+  .courses-list-title{
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .burger-button{
+    display: block ;
+  }
+  .header {
+    display: block;
+    height: auto;
+  }
+  .header ol {
+    display: block;
+  }
+  .header ol li {
+    height: 50px;
+  }
+  .header a {
+    justify-content: center;
+    color: white;
+    height: 40px;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: .5em;
+  }
+  .header .logo {
+    text-align: center;
+  }
+  .menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: -100vw; /*de esta manera el menú se encuentra oculto por defecto*/
+    width: 100vw;
+    bottom: 0;
+    background:rgba(105, 140, 139, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .menu.is-active {
+    left: 0;
+  }/*esta unión de clases hará que el menú se muestre cuando se dispare esta acción*/
+  .portfolio{
+    padding: 0;
+  }
+  .project {
+    display: block;
+  }
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+  .project-details {
+    width: auto;
+    /*font-size: 16px;*/
+  }
+  .project-course, .project-date {
+    margin: .1em, 0;
+  }
+  .project-title {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+  }
+  .project-course {
+    font-size: .8em;
+  }
+  .project-date {
+    font-size: 1em;
+  }
+  .project-description {
+    font-size: 1em;
+  }
+  .course {
+    width: auto;
+    flex-shrink: initial; /*sirve para resetear*/
+  }
+  .course img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .hero {
+    padding: 2em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  .project-details {
+    font-size: 14px;
+  }
+  .course-detail {
+    margin: -40px 10px 10px 10px;
+    padding: 10px;
+  }
+  .contact {
+    height: auto;
+    padding: 1em 0;
+    text-align: center;
+    display: block;
+  }
+  .form-email button {
+    margin: 1em auto;
+  }
+  .form-email h3 {
+    margin-top: 0;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.2em;
+  }
+  .header a {
+    font-size: 1.5em;
+  }
+  .hero {
+    padding: 1em 1em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  .course-description {
+    font-size: .8em;
+  }
+}
